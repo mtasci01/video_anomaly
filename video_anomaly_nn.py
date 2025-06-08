@@ -94,7 +94,7 @@ model.add(Dense(100, activation='relu', kernel_initializer='he_uniform'))
 model.add(Dropout(0.5))
 model.add(Dense(n_classes, activation='softmax'))
 model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
-model.fit(x_train, y_train, epochs=1, batch_size=128, verbose=1)
+model.fit(x_train, y_train, epochs=10, batch_size=128, verbose=1)
 
 loss, acc = model.evaluate(x_test, y_test)
 print('Accuracy: %.3f' % acc)
